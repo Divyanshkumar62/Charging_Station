@@ -2,6 +2,19 @@
   <div id="map" class="w-full h-full rounded shadow"></div>
 </template>
 
+<style scoped>
+#map {
+  height: 100%;
+  min-height: 400px;
+  width: 100%;
+  border-radius: 0.5rem;
+  z-index: 0;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+</style>
+
+
 <script setup>
 import { onMounted, watch } from "vue";
 import L from "leaflet";
@@ -71,8 +84,5 @@ watch(() => props.stations, (newStations) => {
 <style>
 @import "leaflet/dist/leaflet.css";
 
-#map {
-  height: 400px;
-  width: 100%;
-}
+
 </style>
